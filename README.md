@@ -1,4 +1,3 @@
-cat > README.md << _EOF
 # Jarvis Data Engineering Training
 1. [Linux Cluster Monitoring Agent (Linux and SQL)](./linux_sql) In-progress
 2. [Core Java Apps](./core_java) In-progress
