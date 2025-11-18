@@ -99,13 +99,15 @@ Usage:
 ## SQL (queries.sql)
 
 Includes SQL queries for analyzing:
-- Overloaded hosts  
-- Underutilized systems  
-- CPU/memory/disk performance patterns  
-- Resource threshold violations  
 
-Example:  
-> Which host has the highest average CPU usage?
+- Hosts grouped by CPU number and memory
+- Average memory usage per 5-minute intervals
+- Detecting host failures or missing data points
+
+Example query:
+
+- Which host has the highest average memory usage in a given interval?
+
 
 ---
 
@@ -137,40 +139,42 @@ Example:
 
 ---
 
-## Testing
+# Testing
 
-- `psql_docker.sh` successfully created and managed the DB container.
-- `host_info.sh` inserted correct hardware specs.
-- `host_usage.sh` was run repeatedly to confirm timestamps and FK integrity.
-- `ddl.sql` executed cleanly with all constraints working as intended.
+ `psql_docker.sh` successfully created and managed the DB container.
+ `host_info.sh` inserted correct hardware specs.
+ `host_usage.sh` was run repeatedly to confirm timestamps and FK integrity.
+ `ddl.sql` executed cleanly with all constraints working as intended.
 
----
+--
 
-## Deployment
+# Deployment
 
-This project uses:
-- **GitHub** for version control  
-- **Docker** for PostgreSQL  
-- **crontab** for scheduled monitoring  
-- **GCP VM** for environment hosting  
-- **VNC Viewer** for GUI access  
+his project uses:
+ **GitHub** for version control  
+ **Docker** for PostgreSQL  
+ **crontab** for scheduled monitoring  
+ **GCP VM** for environment hosting  
+ **VNC Viewer** for GUI access  
 
----
+--
 
-## Project Structure
+# Project Structure
 
-```
-linux_sql/
-¦
-+-- scripts/
-¦   +-- psql_docker.sh
-¦   +-- host_info.sh
-¦   +-- host_usage.sh
-¦   +-- crontab.txt
-¦
-+-- sql/
-¦   +-- ddl.sql
-¦   +-- queries.sql
+``
+inux_sql/
+
+-- scripts/
+   +-- psql_docker.sh
+   +-- host_info.sh
+   +-- host_usage.sh
+   +-- crontab.txt
+
+-- sql/
+   +-- ddl.sql
+   +-- queries.sql
+
+-- README.md
 
 ```
 
