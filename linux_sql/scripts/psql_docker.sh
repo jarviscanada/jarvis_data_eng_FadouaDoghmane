@@ -6,14 +6,13 @@ db_username=$2
 db_password=$3
 
 # Start docker
-# Make sure you understand the double pipe operator
 sudo systemctl status docker >/dev/null 2>&1 || systemctl start docker >/dev/null 2>&1
 
-# Check container status (try the following cmds on terminal)
+# Check container status 
 docker container inspect jrvs-psql
 container_status=$?
 
-# User switch case to handle create|stop|start opetions
+# User switch case to handle create|stop|start operations
 case $cmd in 
   create)
   
@@ -39,7 +38,7 @@ case $cmd in
   	-v jrvs-psql-data:/var/lib/postgresql/data \
   	-p 5432:5432 \
   	postgres:latest		
-  # Make sure you understand what's `$?`
+
 	exit $?
 	;;
 
