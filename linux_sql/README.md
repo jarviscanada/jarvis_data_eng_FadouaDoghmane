@@ -141,52 +141,49 @@ Example query:
 
 # Testing
 
- `psql_docker.sh` successfully created and managed the DB container.
- `host_info.sh` inserted correct hardware specs.
- `host_usage.sh` was run repeatedly to confirm timestamps and FK integrity.
- `ddl.sql` executed cleanly with all constraints working as intended.
+- `psql_docker.sh` successfully created and managed the DB container.
+- `host_info.sh` inserted correct hardware specs.
+- `host_usage.sh` was run repeatedly to confirm timestamps and FK integrity.
+- `ddl.sql` executed cleanly with all constraints working as intended.
 
---
+---
 
 # Deployment
 
-his project uses:
- **GitHub** for version control  
- **Docker** for PostgreSQL  
- **crontab** for scheduled monitoring  
- **GCP VM** for environment hosting  
- **VNC Viewer** for GUI access  
+This project uses:
 
---
+- **GitHub** for version control
+- **Docker** for PostgreSQL
+- **crontab** for scheduled monitoring
+- **GCP VM** for environment hosting
+- **VNC Viewer** for GUI access
+
+---
 
 # Project Structure
 
-``
-inux_sql/
-
--- scripts/
-   +-- psql_docker.sh
-   +-- host_info.sh
-   +-- host_usage.sh
-   +-- crontab.txt
-
--- sql/
-   +-- ddl.sql
-   +-- queries.sql
-
--- README.md
-
-```
+| Folder / File | Description |
+|---------------|-------------|
+| `linux_sql/`  | Root project folder |
+| `linux_sql/scripts/` | Bash scripts for DB setup and monitoring |
+| `psql_docker.sh` | Creates and manages PostgreSQL Docker container |
+| `host_info.sh`  | Collects hardware specifications and inserts into DB |
+| `host_usage.sh` | Collects usage metrics and inserts into DB |
+| `crontab.txt`   | Example crontab configuration for scheduled scripts |
+| `linux_sql/sql/` | SQL scripts folder |
+| `ddl.sql`       | Database schema and constraints |
+| `queries.sql`   | Sample queries to retrieve collected data |
+| `README.md`     | Project documentation |
 
 ---
 
-## Improvements
+# Improvements
 
 Future enhancements:
-1. Auto-detect hardware changes (CPU/RAM upgrades).
-2. Add retry logic for DB connection failures.
-3. Integrate email/Slack alerts for abnormal metrics.
-4. Convert Bash scripts into systemd services.
+
+1. Auto-detect hardware changes (CPU/RAM upgrades)
+2. Add retry logic for DB connection failures
+3. Integrate email/Slack alerts for abnormal metrics
+4. Convert Bash scripts into systemd services
 
 ---
-
