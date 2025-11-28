@@ -7,7 +7,7 @@
       ],
       "degree": "Bachelor of Engineering (Software Engineering, Co-op)",
       "department": "Gina Cody School of Engineering",
-      "duration": "2021-2025",
+      "duration": "2021 - 2025",
       "school_name": "Concordia University"
     },
     {
@@ -16,21 +16,24 @@
       ],
       "degree": "Diploma of College Studies (Health Sciences)",
       "department": "Science",
-      "duration": "2019-2021",
+      "duration": "2019 - 2021",
       "school_name": "Champlain College Saint-Lambert"
     }
   ],
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane",
   "highlighted_projects": [
     {
-      "description": "Developed a CNN-based waste classification model using Python and PyTorch. Implemented data preprocessing, visualization, model training, and performance evaluation to enhance recycling accuracy and reduce landfill dependency.\n",
-      "git_url": null,
+      "description": "Developed an AI-powered waste classification system using Python and PyTorch to automate the sorting of 10 waste classes and reduce landfill dependency.  Implemented data preprocessing, augmentation, and visualization, trained and evaluated MobileNet, ResNet50, and VGG16 CNN models, and achieved 82.79% test accuracy with MobileNet.  Created modular notebooks and scripts for reproducible training, evaluation, and deployment on sample datasets.  The project enabled scalable and efficient AI-driven waste sorting while providing robust performance metrics and insights for deployment in real-world recycling applications.\n",
       "name": "AI-Powered Waste Sorting"
     },
     {
-      "description": "Built analytical dashboards using Power BI and Excel to evaluate Montreals food assistance program distribution, generating insights on usage patterns and resource allocation.\n",
-      "git_url": null,
+      "description": "Built analytical dashboards using Power BI and Excel to evaluate Montreal’s food assistance program distribution. Collected, cleaned, and transformed datasets from multiple sources to ensure accurate reporting.  Designed interactive visualizations to analyze usage patterns, identify underserved areas, and monitor resource allocation efficiency.  Interpreted the data insights independently and provided actionable recommendations to improve program reach and effectiveness.  This project enhanced understanding of food assistance logistics and demonstrated how data-driven decision-making can optimize social programs.\n",
       "name": "Food Assistance Analytics (Hackathon)"
+    },
+    {
+      "description": "Developed a Convolutional Neural Network (CNN) to detect emotions from facial expressions in a team of three.  The project involved dataset preparation, including cleaning, labeling, augmentation, and visualization using Python and Matplotlib.  Implemented multiple CNN variants and trained models to classify emotions such as happy, focused, surprised, and neutral.  Conducted k-fold cross-validation for robust evaluation and mitigated bias in age and gender datasets through re-labeling and retraining.  Delivered final models capable of accurate emotion detection and provided comprehensive documentation of dataset provenance, preprocessing steps, CNN architecture, evaluation metrics, and bias mitigation strategies.\n",
+      "git_url": "https://github.com/dogmen6/Emotion-Detector-CNN",
+      "name": "Emotion-Detector-CNN"
     }
   ],
   "jarvis_projects": [
@@ -53,15 +56,21 @@
   ],
   "professional_experience": [
     {
+      "company": "Jarvis Program",
+      "description": "Participating in the Jarvis program to gain practical experience in Linux, Bash scripting, SQL, and Python for data analytics. Focused on building foundational skills in data handling and analysis for enterprise-level applications.\n",
+      "duration": "Nov 2025 – Present",
+      "title": "Junior Data Engineer Trainee"
+    },
+    {
       "company": "CrucialLogics",
       "description": "Developed Power BI dashboards to deliver data-driven business insights, built integrations between enterprise tools using REST APIs and Azure Logic Apps, and deployed Copilot agents to automate workflows and enhance productivity. Collaborated with cross-functional teams to analyze requirements and design scalable automation solutions.\n",
-      "duration": "May 2024- Present",
+      "duration": "May 2024 - Present",
       "title": "Associate Consultant"
     },
     {
       "company": "Bombardier Recreational Products (BRP)",
       "description": "Collaborated with business units to improve data quality by generating Snowflake and Power BI reports, identifying data issues, and documenting processes. Contributed to template creation and workflow documentation to streamline team operations and enhance data reliability.\n",
-      "duration": "May 2023- Aug 2023",
+      "duration": "May 2023 - Aug 2023",
       "title": "Data Quality Intern"
     }
   ],
@@ -74,11 +83,11 @@
       "Data Modeling"
     ],
     "familiar": [
-      "React JS",
       "PyTorch",
-      "HTML/CSS/JavaScript",
       "PySpark/Apache Spark",
-      "Azure Logic Apps"
+      "Azure Logic Apps",
+      "HTML/CSS",
+      "React JS"
     ],
     "proficient": [
       "SQL",
@@ -88,5 +97,5 @@
       "REST APIs"
     ]
   },
-  "summary": "I am a Software Engineering graduate with hands-on experience in data integration, workflow automation, and analytics. Through my roles at CrucialLogics and BRP, I have built integrations using REST APIs, automated workflows with Azure Logic Apps to synchronize data between tools, designed Power BI dashboards, and delivered actionable data quality insights using SQL and Snowflake. I am passionate about leveraging data to improve processes, generate insights, and enable informed decision-making. I am seeking developer or data-focused engineering roles where I can apply my problem-solving skills, technical foundation, and ability to quickly learn and deliver solutions.\n"
+  "summary": "I am a Software Engineering graduate from Concordia University with hands-on\n experience in data integration, workflow automation, and analytics. Through my\n roles at CrucialLogics and BRP, I have built integrations using REST APIs,\n automated workflows with Azure Logic Apps to synchronize data between tools,\n designed Power BI dashboards, and delivered actionable data quality insights\n using SQL and Snowflake. I am currently participating in the Jarvis program to\n further develop my skills and prepare for data-focused roles in enterprise\n environments. I am passionate about leveraging data to improve processes,\n generate insights, and enable informed decision-making. I am seeking developer\n or data-focused engineering roles where I can apply my problem-solving skills,\n technical foundation, and ability to quickly learn and deliver solutions.\n"
 }
