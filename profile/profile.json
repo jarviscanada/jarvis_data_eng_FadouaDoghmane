@@ -3,7 +3,7 @@
     {
       "awards_achievements": [
         "Undergraduate Entrance Bursary (2021)",
-        "Bourses dEXC for Engineering (2022)"
+        "Engineering Excellence Scholarship (2022)"
       ],
       "degree": "Bachelor of Engineering (Software Engineering, Co-op)",
       "department": "Gina Cody School of Engineering",
@@ -20,7 +20,7 @@
       "school_name": "Champlain College Saint-Lambert"
     }
   ],
-  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_fadoua",
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane",
   "highlighted_projects": [
     {
       "description": "Developed a CNN-based waste classification model using Python and PyTorch. Implemented data preprocessing, visualization, model training, and performance evaluation to enhance recycling accuracy and reduce landfill dependency.\n",
@@ -36,7 +36,7 @@
   "jarvis_projects": [
     {
       "description": "Developed a lightweight Linux monitoring agent using Bash, Docker, crontab, and PostgreSQL to collect hardware specs and real-time usage metrics across multiple Rocky Linux hosts. Implemented hardware/usage collection scripts, containerized PostgreSQL backend, automated scheduling via crontab, and data analytics queries for performance monitoring.\n",
-      "git_url": "/linux_sql",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/tree/main/linux_sql",
       "name": "Linux Cluster Resource Monitoring App"
     }
   ],
@@ -45,8 +45,8 @@
     {
       "bullets": [
         "Reading thrillers and self-development books.",
-        "Training in boxing regularly.",
-        "Baking"
+        "Boxing regularly and trying various martial arts.",
+        "Baking desserts from various cultures."
       ],
       "title": "Activities/Hobbies"
     }
