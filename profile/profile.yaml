@@ -1,34 +1,34 @@
 name: "Fadoua Doghmane"
-github_repo_root_url: https://github.com/dogmen6
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_fadoua
 
 summary: >
-  I am a Software Engineering student with hands-on experience in data engineering,
-  cloud automation, and analytics. Through my roles at CrucialLogics and BRP, Ive
-  built integrations using REST APIs, automated workflows with Azure Logic Apps,
-  designed Power BI dashboards, and delivered data quality insights using SQL and
-  Snowflake. I am passionate about backend development, data engineering, and building
-  systems that automate, optimize, and scale. I am seeking developer or data-focused
-  engineering roles where I can apply my problem-solving skills, technical foundation,
-  and ability to quickly learn and deliver solutions.
+  I am a Software Engineering graduate with hands-on experience in data integration,
+  workflow automation, and analytics. Through my roles at CrucialLogics and BRP, I have
+  built integrations using REST APIs, automated workflows with Azure Logic Apps to
+  synchronize data between tools, designed Power BI dashboards, and delivered actionable
+  data quality insights using SQL and Snowflake. I am passionate about leveraging data
+  to improve processes, generate insights, and enable informed decision-making. I am
+  seeking developer or data-focused engineering roles where I can apply my problem-solving
+  skills, technical foundation, and ability to quickly learn and deliver solutions.
 
 skills:
   proficient:
-    - SQL/PostgreSQL
+    - SQL
+    - DBMS (MySQL, Snowflake, PostgreSQL)
     - Python
-    - Bash/Shell
     - Power BI
-    - Git/GitHub
+    - REST APIs
   competent:
     - Java
     - Docker
-    - Linux Administration
-    - REST APIs
+    - Linux
+    - Pandas/Numpy
     - Data Modeling
   familiar:
     - React JS
     - PyTorch
     - HTML/CSS/JavaScript
-    - Snowflake
+    - PySpark/Apache Spark
     - Azure Logic Apps
 
 jarvis_projects:
@@ -58,7 +58,7 @@ highlighted_projects:
 professional_experience:
   - title: "Associate Consultant"
     company: "CrucialLogics"
-    duration: "May 2024  Present"
+    duration: "May 2024- Present"
     description: >
       Developed Power BI dashboards to deliver data-driven business insights, built
       integrations between enterprise tools using REST APIs and Azure Logic Apps,
@@ -67,7 +67,7 @@ professional_experience:
       scalable automation solutions.
   - title: "Data Quality Intern"
     company: "Bombardier Recreational Products (BRP)"
-    duration: "May 2023  Aug 2023"
+    duration: "May 2023- Aug 2023"
     description: >
       Collaborated with business units to improve data quality by generating
       Snowflake and Power BI reports, identifying data issues, and documenting
@@ -76,14 +76,14 @@ professional_experience:
 
 education:
   - school_name: "Concordia University"
-    duration: "20212025"
+    duration: "2021-2025"
     degree: "Bachelor of Engineering (Software Engineering, Co-op)"
     department: "Gina Cody School of Engineering"
     awards_achievements:
       - "Undergraduate Entrance Bursary (2021)"
       - "Bourses dEXC for Engineering (2022)"
   - school_name: "Champlain College Saint-Lambert"
-    duration: "20192021"
+    duration: "2019-2021"
     degree: "Diploma of College Studies (Health Sciences)"
     department: "Science"
     awards_achievements:
@@ -92,7 +92,7 @@ education:
 others:
   - title: "Activities/Hobbies"
     bullets:
-      - "Reading (thrillers and self-development)"
-      - "Boxing and hiking"
+      - "Reading thrillers and self-development books."
+      - "Training in boxing regularly."
       - "Baking"
 
