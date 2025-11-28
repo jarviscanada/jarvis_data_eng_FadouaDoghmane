@@ -13,10 +13,10 @@ I am a Software Engineering graduate with hands-on experience in data integratio
 
 ## Jarvis Projects
 
-Project source code: [https://github.com/jarviscanada/jarvis_data_eng_fadoua](https://github.com/jarviscanada/jarvis_data_eng_fadoua)
+Project source code: [https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane)
 
 
-**Linux Cluster Resource Monitoring App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_fadoua/tree/master/linux_sql)]: Developed a lightweight Linux monitoring agent using Bash, Docker, crontab, and PostgreSQL to collect hardware specs and real-time usage metrics across multiple Rocky Linux hosts. Implemented hardware/usage collection scripts, containerized PostgreSQL backend, automated scheduling via crontab, and data analytics queries for performance monitoring.
+**Linux Cluster Resource Monitoring App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/tree/main/linux_sql)]: Developed a lightweight Linux monitoring agent using Bash, Docker, crontab, and PostgreSQL to collect hardware specs and real-time usage metrics across multiple Rocky Linux hosts. Implemented hardware/usage collection scripts, containerized PostgreSQL backend, automated scheduling via crontab, and data analytics queries for performance monitoring.
 
 
 
@@ -40,7 +40,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_fadoua](ht
 ## Education
 **Concordia University (2021-2025)**, Bachelor of Engineering (Software Engineering, Co-op), Gina Cody School of Engineering
 - Undergraduate Entrance Bursary (2021)
-- Bourses dEXC for Engineering (2022)
+- Engineering Excellence Scholarship (2022)
 
 **Champlain College Saint-Lambert (2019-2021)**, Diploma of College Studies (Health Sciences), Science
 - Honor Roll Student (2020, 2021)
@@ -48,5 +48,5 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_fadoua](ht
 
 ## Miscellaneous
 - Reading thrillers and self-development books.
-- Training in boxing regularly.
-- Baking
+- Boxing regularly and trying various martial arts.
+- Baking desserts from various cultures.
