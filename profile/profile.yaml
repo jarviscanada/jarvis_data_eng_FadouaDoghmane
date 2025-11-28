@@ -1,0 +1,98 @@
+name: "Fadoua Doghmane"
+github_repo_root_url: https://github.com/dogmen6
+
+summary: >
+  I am a Software Engineering student with hands-on experience in data engineering,
+  cloud automation, and analytics. Through my roles at CrucialLogics and BRP, Ive
+  built integrations using REST APIs, automated workflows with Azure Logic Apps,
+  designed Power BI dashboards, and delivered data quality insights using SQL and
+  Snowflake. I am passionate about backend development, data engineering, and building
+  systems that automate, optimize, and scale. I am seeking developer or data-focused
+  engineering roles where I can apply my problem-solving skills, technical foundation,
+  and ability to quickly learn and deliver solutions.
+
+skills:
+  proficient:
+    - SQL/PostgreSQL
+    - Python
+    - Bash/Shell
+    - Power BI
+    - Git/GitHub
+  competent:
+    - Java
+    - Docker
+    - Linux Administration
+    - REST APIs
+    - Data Modeling
+  familiar:
+    - React JS
+    - PyTorch
+    - HTML/CSS/JavaScript
+    - Snowflake
+    - Azure Logic Apps
+
+jarvis_projects:
+  - name: "Linux Cluster Resource Monitoring App"
+    git_url: "/linux_sql"
+    description: >
+      Developed a lightweight Linux monitoring agent using Bash, Docker, crontab,
+      and PostgreSQL to collect hardware specs and real-time usage metrics across
+      multiple Rocky Linux hosts. Implemented hardware/usage collection scripts,
+      containerized PostgreSQL backend, automated scheduling via crontab, and data
+      analytics queries for performance monitoring.
+
+highlighted_projects:
+  - name: "AI-Powered Waste Sorting"
+    git_url:
+    description: >
+      Developed a CNN-based waste classification model using Python and PyTorch.
+      Implemented data preprocessing, visualization, model training, and performance
+      evaluation to enhance recycling accuracy and reduce landfill dependency.
+  - name: "Food Assistance Analytics (Hackathon)"
+    git_url:
+    description: >
+      Built analytical dashboards using Power BI and Excel to evaluate Montreals
+      food assistance program distribution, generating insights on usage patterns
+      and resource allocation.
+
+professional_experience:
+  - title: "Associate Consultant"
+    company: "CrucialLogics"
+    duration: "May 2024  Present"
+    description: >
+      Developed Power BI dashboards to deliver data-driven business insights, built
+      integrations between enterprise tools using REST APIs and Azure Logic Apps,
+      and deployed Copilot agents to automate workflows and enhance productivity.
+      Collaborated with cross-functional teams to analyze requirements and design
+      scalable automation solutions.
+  - title: "Data Quality Intern"
+    company: "Bombardier Recreational Products (BRP)"
+    duration: "May 2023  Aug 2023"
+    description: >
+      Collaborated with business units to improve data quality by generating
+      Snowflake and Power BI reports, identifying data issues, and documenting
+      processes. Contributed to template creation and workflow documentation to
+      streamline team operations and enhance data reliability.
+
+education:
+  - school_name: "Concordia University"
+    duration: "20212025"
+    degree: "Bachelor of Engineering (Software Engineering, Co-op)"
+    department: "Gina Cody School of Engineering"
+    awards_achievements:
+      - "Undergraduate Entrance Bursary (2021)"
+      - "Bourses dEXC for Engineering (2022)"
+  - school_name: "Champlain College Saint-Lambert"
+    duration: "20192021"
+    degree: "Diploma of College Studies (Health Sciences)"
+    department: "Science"
+    awards_achievements:
+      - "Honor Roll Student (2020, 2021)"
+
+others:
+  - title: "Activities/Hobbies"
+    bullets:
+      - "Reading (thrillers and self-development)"
+      - "Boxing and hiking"
+      - "Baking"
+
