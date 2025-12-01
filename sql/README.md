@@ -1,112 +1,308 @@
-# README.md
+# SQL Exercises Documentation
 
-# SQL Queries Documentation
+This document summarizes the SQL exercises completed, including table setup, data modification, joins, aggregation, and string queries. Each section contains a description of the exercise, solution, and corresponding SQL queries. These exercises were performed using PostgreSQL and cover practical SQL skills such as data manipulation, querying, joins, aggregation functions, and window functions.
 
-This document explains the solutions to each SQL query from the exercises. Each question is numbered and includes a short explanation of the solution.
+---
+
+## Table Setup (DDL)
+
+The database `exercises` contains a schema `cd` with three main tables: `members`, `facilities`, and `bookings`.
+
+- **members**: Stores member information including names, contact details, who recommended them, and join dates.
+- **facilities**: Lists all available facilities, their costs, initial outlay, and monthly maintenance.
+- **bookings**: Tracks facility bookings by members, including the number of slots booked and start times.
+
+Primary keys are defined for all tables, and foreign keys maintain relationships between `members` and `bookings` as well as `facilities` and `bookings`. Indexes were added on commonly queried columns to improve performance.
 
 ---
 
 ## Modifying Data
 
 ### Question 1
-**Solution:** Inserted a new facility with `facid = 9`, name "Spa", member cost 20, guest cost 30, initial outlay 100000, and monthly maintenance 800.  
+**Solution:** Inserted a new facility with specific details.
+
+```sql
+INSERT INTO cd.facilities(facid, name, membercost, guestcost, initialoutlay, monthlymaintenance)
+VALUES (9, 'Spa', 20, 30, 100000, 800);
+```
 
 ### Question 2
-**Solution:** Inserted a new facility using a `SELECT` statement to automatically assign the next `facid` based on the current maximum `facid`.  
+**Solution:** Inserted a new facility with automatic `facid` assignment.
+
+```sql
+INSERT INTO cd.facilities(facid, name, membercost, guestcost, initialoutlay, monthlymaintenance)
+SELECT MAX(facid) + 1, 'Spa', 20, 30, 100000, 800 FROM cd.facilities;
+```
 
 ### Question 3
-**Solution:** Updated the `initialoutlay` of the facility with `facid = 1` to 10000.  
+**Solution:** Updated the `initialoutlay` of facility 1.
+
+```sql
+UPDATE cd.facilities
+SET initialoutlay = 10000
+WHERE facid = 1;
+```
 
 ### Question 4
-**Solution:** Updated facility 1s `membercost` and `guestcost` to 10% higher than facility 0s costs.  
+**Solution:** Increased facility 1's costs by 10% relative to facility 0.
+
+```sql
+UPDATE cd.facilities fac
+SET membercost = (SELECT membercost*1.1 FROM cd.facilities WHERE facid = 0),
+    guestcost = (SELECT guestcost*1.1 FROM cd.facilities WHERE facid = 0)
+WHERE fac.facid = 1;
+```
 
 ### Question 5
-**Solution:** Deleted all bookings from the `cd.bookings` table.  
+**Solution:** Deleted all bookings.
+
+```sql
+DELETE FROM cd.bookings;
+```
 
 ### Question 6
-**Solution:** Deleted the member with `memid = 37` from the `cd.members` table.  
+**Solution:** Deleted a member with a specific `memid`.
+
+```sql
+DELETE FROM cd.members
+WHERE memid = 37;
+```
 
 ---
 
 ## Basics
 
 ### Question 1
-**Solution:** Selected facilities where the member cost is positive but less than 1/50th of the monthly maintenance.  
+**Solution:** Selected facilities with member cost greater than 0 but less than 1/50 of monthly maintenance.
+
+```sql
+SELECT facid, name, membercost, monthlymaintenance
+FROM cd.facilities
+WHERE membercost > 0 AND membercost < monthlymaintenance/50;
+```
 
 ### Question 2
-**Solution:** Selected all facilities containing "Tennis" in their name.  
+**Solution:** Selected all facilities containing "Tennis".
+
+```sql
+SELECT *
+FROM cd.facilities
+WHERE name LIKE '%Tennis%';
+```
 
 ### Question 3
-**Solution:** Selected facilities with `facid` 1 or 5.  
+**Solution:** Selected facilities with `facid` 1 or 5.
+
+```sql
+SELECT *
+FROM cd.facilities
+WHERE facid IN (1,5);
+```
 
 ### Question 4
-**Solution:** Selected members who joined on or after September 1, 2012.  
+**Solution:** Members who joined on or after 2012-09-01.
+
+```sql
+SELECT memid, surname, firstname, joindate
+FROM cd.members
+WHERE joindate >= '2012-09-01';
+```
 
 ### Question 5
-**Solution:** Combined member surnames and facility names into a single list, removing duplicates using `UNION`.  
+**Solution:** Combined member surnames and facility names, removing duplicates.
+
+```sql
+SELECT surname FROM cd.members
+UNION
+SELECT name FROM cd.facilities;
+```
 
 ---
 
 ## Join Queries
 
 ### Question 1
-**Solution:** Selected booking start times for the member "David Farrell".  
+**Solution:** Booking start times for member "David Farrell".
+
+```sql
+SELECT b.starttime
+FROM cd.bookings AS b
+JOIN cd.members AS m ON b.memid = m.memid
+WHERE m.firstname='David' AND m.surname='Farrell';
+```
 
 ### Question 2
-**Solution:** Selected bookings for Tennis Court facilities on September 21, 2012, ordered by start time.  
+**Solution:** Bookings for Tennis Court facilities on 2012-09-21 ordered by time.
+
+```sql
+SELECT b.starttime AS start, f.name
+FROM cd.facilities AS f
+JOIN cd.bookings AS b ON b.facid = f.facid
+WHERE f.name LIKE 'Tennis Court %'
+  AND b.starttime >= '2012-09-21'
+  AND b.starttime < '2012-09-22'
+ORDER BY b.starttime;
+```
 
 ### Question 3
-**Solution:** Selected each member and the member who recommended them (if any) using a left join.  
+**Solution:** Each member and the member who recommended them.
+
+```sql
+SELECT mem.firstname AS memfname, mem.surname AS memsname,
+       rec.firstname AS recfname, rec.surname AS recsname
+FROM cd.members mem
+LEFT JOIN cd.members rec ON rec.memid = mem.recommendedby
+ORDER BY memsname, memfname;
+```
 
 ### Question 4
-**Solution:** Selected distinct recommending members.  
+**Solution:** Distinct recommending members.
+
+```sql
+SELECT DISTINCT rec.firstname, rec.surname
+FROM cd.members mem
+JOIN cd.members rec ON rec.memid = mem.recommendedby
+ORDER BY surname, firstname;
+```
 
 ### Question 5
-**Solution:** Selected each member with the full name of the member who recommended them.  
+**Solution:** Each member with the full name of who recommended them.
+
+```sql
+SELECT DISTINCT mem.firstname || ' ' || mem.surname AS member,
+       (SELECT rec.firstname || ' ' || rec.surname
+        FROM cd.members rec
+        WHERE mem.recommendedby = rec.memid)
+FROM cd.members mem
+ORDER BY member;
+```
 
 ---
 
-## Aggregation
+## Aggregation Queries
 
 ### Question 1
-**Solution:** Counted how many members each recommending member has referred.  
+**Solution:** Count of members each recommending member has referred.
+
+```sql
+SELECT recommendedby, COUNT(*) AS count
+FROM cd.members
+WHERE recommendedby IS NOT NULL
+GROUP BY recommendedby
+ORDER BY recommendedby;
+```
 
 ### Question 2
-**Solution:** Calculated total booking slots per facility.  
+**Solution:** Total booking slots per facility.
+
+```sql
+SELECT facid, SUM(slots) AS "Total Slots"
+FROM cd.bookings
+GROUP BY facid
+ORDER BY facid;
+```
 
 ### Question 3
-**Solution:** Calculated total booking slots per facility in September 2012.  
+**Solution:** Total booking slots per facility in September 2012.
+
+```sql
+SELECT facid, SUM(slots) AS "Total Slots"
+FROM cd.bookings
+WHERE starttime >= '2012-09-01' AND starttime < '2012-10-01'
+GROUP BY facid
+ORDER BY SUM(slots);
+```
 
 ### Question 4
-**Solution:** Calculated monthly total slots per facility for the year 2012.  
+**Solution:** Monthly total slots per facility for 2012.
+
+```sql
+SELECT facid, EXTRACT(MONTH FROM starttime) AS month, SUM(slots) AS "Total Slots"
+FROM cd.bookings
+WHERE EXTRACT(YEAR FROM starttime) = 2012
+GROUP BY facid, month
+ORDER BY facid, month;
+```
 
 ### Question 5
-**Solution:** Counted the total number of distinct members who made bookings.  
+**Solution:** Count of distinct members who made bookings.
+
+```sql
+SELECT COUNT(DISTINCT memid) FROM cd.bookings;
+```
 
 ### Question 6
-**Solution:** Found the earliest booking per member from September 1, 2012.  
+**Solution:** Earliest booking per member since 2012-09-01.
+
+```sql
+SELECT mem.surname, mem.firstname, mem.memid, MIN(b.starttime) AS starttime
+FROM cd.members mem
+JOIN cd.bookings b ON b.memid = mem.memid
+WHERE b.starttime >= '2012-09-01 00:00:00'
+GROUP BY mem.surname, mem.firstname, mem.memid
+ORDER BY memid;
+```
 
 ### Question 7
-**Solution:** Produced a running total of members ordered by join date using `count() over`.  
+**Solution:** Running total of members ordered by join date.
+
+```sql
+SELECT COUNT(*) OVER (ORDER BY joindate) AS row_number, firstname, surname
+FROM cd.members
+ORDER BY joindate;
+```
 
 ### Question 8
-**Solution:** Assigned a unique row number to each member ordered by join date using `row_number() over`.  
+**Solution:** Row number per member ordered by join date.
+
+```sql
+SELECT ROW_NUMBER() OVER (ORDER BY joindate), firstname, surname
+FROM cd.members
+ORDER BY joindate;
+```
 
 ### Question 9
-**Solution:** Selected the facility (or facilities) with the maximum total booking slots using `rank()` to handle ties.  
+**Solution:** Facility with the maximum total booking slots.
+
+```sql
+SELECT facid, total
+FROM (
+  SELECT f.facid, SUM(b.slots) AS total, RANK() OVER (ORDER BY SUM(b.slots) DESC) AS r
+  FROM cd.facilities f
+  LEFT JOIN cd.bookings b ON b.facid = f.facid
+  GROUP BY f.facid
+) sub
+WHERE r = 1;
+```
 
 ---
 
 ## String Queries
 
 ### Question 1
-**Solution:** Formatted member names as "Surname, Firstname".  
+**Solution:** Format member names as "Surname, Firstname".
+
+```sql
+SELECT surname || ', ' || firstname AS name
+FROM cd.members;
+```
 
 ### Question 2
-**Solution:** Selected members whose telephone numbers contain parentheses using a regex pattern.  
+**Solution:** Members with parentheses in telephone numbers.
+
+```sql
+SELECT memid, telephone
+FROM cd.members
+WHERE telephone ~ '[()]';
+```
 
 ### Question 3
-**Solution:** Counted members by the first letter of their surname, ordered alphabetically.  
+**Solution:** Count members by first letter of surname.
 
----
+```sql
+SELECT SUBSTRING(surname, 1, 1) AS letter, COUNT(*)
+FROM cd.members
+GROUP BY letter
+ORDER BY letter;
+```
 
