@@ -38,7 +38,7 @@
   "jarvis_projects": [
     {
       "description": "Developed a lightweight Linux monitoring agent using Bash, Docker, crontab, and PostgreSQL to collect and store hardware specifications and real-time usage metrics across multiple Rocky Linux hosts. Implemented automated data collection scripts, containerized the PostgreSQL backend, scheduled recurring metric gathering with crontab, and built analytics queries to monitor system performance and resource utilization.\n",
-      "git_url": "linux_sql",
+      "git_url": "/linux_sql",
       "name": "Linux Cluster Resource Monitoring App"
     }
   ],

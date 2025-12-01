@@ -16,7 +16,7 @@ I am a Software Engineering graduate from Concordia University with hands-on exp
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane)
 
 
-**Linux Cluster Resource Monitoring App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/tree/masterlinux_sql)]: Developed a lightweight Linux monitoring agent using Bash, Docker, crontab, and PostgreSQL to collect and store hardware specifications and real-time usage metrics across multiple Rocky Linux hosts. Implemented automated data collection scripts, containerized the PostgreSQL backend, scheduled recurring metric gathering with crontab, and built analytics queries to monitor system performance and resource utilization.
+**Linux Cluster Resource Monitoring App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/tree/master/linux_sql)]: Developed a lightweight Linux monitoring agent using Bash, Docker, crontab, and PostgreSQL to collect and store hardware specifications and real-time usage metrics across multiple Rocky Linux hosts. Implemented automated data collection scripts, containerized the PostgreSQL backend, scheduled recurring metric gathering with crontab, and built analytics queries to monitor system performance and resource utilization.
 
 
 
