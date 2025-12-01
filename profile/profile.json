@@ -32,14 +32,13 @@
     },
     {
       "description": "Collaborated in a team of three to develop a Convolutional Neural Network capable of detecting emotions from facial expressions. The project included preparing and refining the dataset through cleaning, labeling, augmentation, and visualization, followed by the implementation of multiple CNN variants to classify emotions such as happy, focused, surprised, and neutral. We applied k-fold cross-validation for rigorous evaluation and addressed dataset bias related to age and gender through re-labeling and retraining. The final models were supported with comprehensive documentation detailing data provenance, preprocessing steps, CNN design, evaluation methods, and bias-mitigation strategies.\n",
-      "git_url": "https://github.com/dogmen6/Emotion-Detector-CNN",
       "name": "Emotion-Detector-CNN"
     }
   ],
   "jarvis_projects": [
     {
       "description": "Developed a lightweight Linux monitoring agent using Bash, Docker, crontab, and PostgreSQL to collect and store hardware specifications and real-time usage metrics across multiple Rocky Linux hosts. Implemented automated data collection scripts, containerized the PostgreSQL backend, scheduled recurring metric gathering with crontab, and built analytics queries to monitor system performance and resource utilization.\n",
-      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/tree/main/linux_sql",
+      "git_url": "linux_sql",
       "name": "Linux Cluster Resource Monitoring App"
     }
   ],
