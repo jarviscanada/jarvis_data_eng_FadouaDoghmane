@@ -1,49 +1,48 @@
 # Fadoua Doghmane · Jarvis Consulting
 
-Diplômée en génie logiciel de l’Université Concordia, je possède une expérience pratique en analytique de données, automatisation de workflows et production de rapports. Chez CrucialLogics et BRP, j’ai développé des intégrations via des API REST, automatisé des flux de travail avec Azure Logic Apps, conçu des tableaux de bord Power BI et produit des analyses exploitables basées sur SQL, DAX et divers systèmes de bases de données.  
-Actuellement, je travaille chez Jarvis, où je développe des pipelines de données, j’analyse et je visualise des données à l’aide de Python, Bash et SQL, et je conçois des solutions évolutives utilisant Docker, PostgreSQL et des environnements Linux. Passionnée par la valorisation des données, je cherche à rejoindre des équipes data où je pourrai mettre à profit mes compétences techniques, ma capacité d’analyse et mon sens de la résolution de problèmes.
+Je suis diplômé en génie logiciel de l'Université Concordia et possède une expérience pratique dans l'analyse de données, l'automatisation des flux de travail et la production de rapports de données. Dans le cadre de mes fonctions chez CrucialLogics et BRP, j'ai développé des intégrations à l'aide d'API REST, automatisé des flux de travail avec Azure Logic Apps pour synchroniser les données entre les systèmes, conçu des tableaux de bord Power BI et fourni des informations exploitables sur la qualité des données à l'aide de SQL, DAX et diverses bases de données. Je travaille actuellement chez Jarvis, où je développe des pipelines de données, j'analyse et je visualise des données à l'aide de Python, Bash et SQL, et je crée des solutions évolutives en tirant parti de Docker, PostgreSQL et des environnements basés sur Linux. Je suis passionné par l'utilisation des données pour améliorer les processus et découvrir des informations. Je recherche des postes d'ingénieur axés sur les données où je peux mettre en pratique mes compétences en matière de résolution de problèmes, mes solides bases techniques et ma capacité à apprendre rapidement et à fournir des solutions efficaces.
 
 ## Compétences
 
-**Maîtrisé :** SQL, SGBD (MySQL, Snowflake, PostgreSQL), Modélisation de données, Python, Pandas/Numpy, PySpark/Apache Spark, Power BI, REST APIs
+**Maîtrisé :** SQL, SGBD (MySQL, Snowflake, PostgreSQL), modélisation de données, Python, Pandas/Numpy, PySpark/Apache Spark, Power BI, API REST
 
-**Compétent :** Java, Docker, Linux, PyTorch, Azure Logic Apps, HTML/CSS, React JS, Agents Copilot AI
+**Compétences :** Java, Docker, Linux, PyTorch, Azure Logic Apps, HTML/CSS, React JS, agents IA Copilot
 
-**Connaissances :** Wireshark, Burp Suite, Android Studio, JavaScript, Microsoft Sentinel
+**Connaissances :** Wireshark, Burp Suite, Android Studio, Javascript, Microsoft Sentinel
 
 ## Projets Jarvis
 
-Code source : [https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane)
+Code source du projet : [https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane)
 
-**Application de surveillance de clusters Linux** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/tree/master/linux_sql)]: Développement d’un agent de surveillance léger sous Linux utilisant Bash, Docker, crontab et PostgreSQL pour collecter les spécifications matérielles et les métriques d’utilisation en temps réel sur plusieurs hôtes Rocky Linux. Mise en place de scripts automatisés, conteneurisation du backend PostgreSQL, planification de la collecte récurrente et création de requêtes analytiques pour suivre la performance et l’utilisation des ressources.
+**Application de surveillance de clusters Linux** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/tree/master/linux_sql)]: développement d'un agent de surveillance Linux léger à l'aide de Bash, Docker, crontab et PostgreSQL pour collecter et stocker les spécifications matérielles et les mesures d'utilisation en temps réel sur plusieurs hôtes Rocky Linux. Mise en œuvre de scripts de collecte de données automatisés, conteneurisation du backend PostgreSQL, planification de la collecte récurrente de mesures avec crontab et création de requêtes analytiques pour surveiller les performances du système et l'utilisation des ressources.
 
 ## Projets Sélectionnés
 
-**Système de tri des déchets par IA**: Développement d’un système de classification des déchets à l’aide de Python et PyTorch. Conception d’une pipeline complète incluant prétraitement, augmentation, visualisation et entraînement de modèles CNN (MobileNet, ResNet50, VGG16). Création de notebooks modulaires assurant une évaluation reproductible et une préparation au déploiement.
+**Système de tri des déchets par IA**: Développement d'un système de classification des déchets assisté par l'IA à l'aide de Python et PyTorch afin d'automatiser le tri de dix catégories de déchets et de soutenir des pratiques de recyclage durables. Création d'un pipeline complet d'apprentissage automatique, comprenant le prétraitement, l'augmentation et la visualisation des données, ainsi que la formation d'architectures CNN telles que MobileNet, ResNet50 et VGG16. Création de carnets et de scripts modulaires pour un apprentissage, une évaluation et un déploiement reproductibles sur des ensembles de données échantillons, démontrant des performances évolutives et des informations exploitables pour la gestion des déchets dans le monde réel.
 
-**Analytique des programmes d’aide alimentaire (Hackathon)**: Création de tableaux de bord Power BI pour analyser l’efficacité de distribution des services alimentaires à Montréal. Préparation des données, intégration de sources multiples, conception de visualisations interactives et formulation de recommandations pour améliorer la couverture et l’efficacité opérationnelle.
+**Analytique des programmes d’aide alimentaire (Hackathon)**: Développement de tableaux de bord analytiques dans Power BI pour évaluer l'efficacité de la distribution des programmes d'aide alimentaire de Montréal. Collecte, nettoyage et transformation de données provenant de multiples sources afin de produire des rapports fiables. Conception de visualisations interactives pour révéler les modèles d'utilisation, mettre en évidence les zones mal desservies et surveiller l'allocation des ressources. Interprétation des résultats afin de formuler des recommandations exploitables, d'améliorer la portée et l'efficacité opérationnelle du programme tout en démontrant l'impact de la prise de décision fondée sur les données sur l'optimisation des programmes sociaux.
 
-**Détection d’émotions par CNN**: Réalisation d’un modèle CNN en équipe pour classifier des émotions faciales. Préparation du dataset, nettoyage, annotation, augmentation, conception de plusieurs variantes CNN, validation croisée et réduction des biais liés à l’âge et au genre. Documentation complète couvrant méthodologie, modèles et stratégies de mitigation.
+**Détection d’émotions par CNN**: Collaboration au sein d'une équipe de trois personnes pour développer un CNN permettant de détecter les émotions à partir des expressions faciales. Préparation et affinage de l'ensemble de données par nettoyage, étiquetage, augmentation et visualisation, et mise en œuvre de plusieurs variantes de CNN pour classer les émotions telles que la joie, la concentration, la surprise et la neutralité. Application d'une validation croisée k-fold pour l'évaluation et atténuation des biais liés à l'âge et au sexe dans l'ensemble de données par réétiquetage et réentraînement. Production d'une documentation complète couvrant la provenance des données, le prétraitement, la conception du modèle, l'évaluation et les stratégies d'atténuation des biais.
 
 ## Expériences Professionnelles
 
-**Ingénieure de données junior · Programme Jarvis (Nov 2025 – Présent)**: Participation à des projets de data engineering utilisant SQL, Python, Linux, Bash, PostgreSQL et Docker. Gestion et transformation de données en environnement entreprise, administration de bases de données, création de pipelines automatisés et mise en place de bonnes pratiques de manipulation des données afin de soutenir des analyses fiables et des décisions éclairées.
+**Ingénieure de données junior · Programme Jarvis (Nov 2025 – Présent)**: Travaille actuellement chez Jarvis sur des projets d'ingénierie des données, notamment SQL, Python, Linux, Bash, PostgreSQL et Docker. Gestion et manipulation de données dans des environnements d'entreprise, création et maintenance de systèmes de bases de données, mise en œuvre de pipelines de données automatisés et application des meilleures pratiques en matière de traitement des données afin de générer des informations exploitables. Réalisation de projets axés sur la création de pipelines évolutifs, la garantie de la qualité des données et le soutien à la prise de décision basée sur les données dans les environnements d'entreprise.
 
-**Consultante associée · CrucialLogics (Mai 2024 – Présent)**: Développement de tableaux de bord Power BI pour fournir des insights stratégiques. Intégration d’outils d’entreprise via API REST et Azure Logic Apps. Déploiement d’agents Copilot pour automatiser des workflows et optimiser l’efficacité opérationnelle. Collaboration avec équipes interfonctionnelles pour définir les besoins, concevoir des solutions évolutives et assurer une mise en œuvre efficace.
+**Consultante associée · CrucialLogics (Mai 2024 – Présent)**: Développement de tableaux de bord Power BI interactifs pour fournir des informations commerciales exploitables et soutenir la prise de décision stratégique. Création d'intégrations entre les outils d'entreprise à l'aide des API REST et des applications Azure Logic Apps afin de rationaliser les flux de données et d'améliorer l'efficacité. Déploiement d'agents Copilot pour automatiser les flux de travail et réduire les efforts manuels. Collaboration avec des équipes interfonctionnelles pour recueillir les exigences, concevoir des solutions d'automatisation évolutives et garantir une mise en œuvre sans heurts. Application d'une réflexion analytique pour identifier les améliorations de processus et fournir des solutions ayant un impact mesurable.
 
-**Stagiaire en qualité des données · BRP (Mai 2023 – Août 2023)**: Production de rapports Snowflake et Power BI pour améliorer la qualité et la fiabilité des données. Identification d’incohérences, documentation de processus, création de modèles standardisés et optimisation des workflows. Analyse de tendances et résolution de problèmes pour fournir des insights exploitables aux parties prenantes.
+**Stagiaire en qualité des données · BRP (Mai 2023 – Août 2023)**: Collaboration avec plusieurs secteurs d'activité afin d'améliorer la qualité des données et de garantir l'exactitude des rapports en générant des rapports Snowflake et Power BI, en identifiant les incohérences et en documentant les processus clés. Élaboration de modèles standardisés et de documentation sur les flux de travail afin de rationaliser les opérations et d'améliorer la fiabilité des données. A appliqué une pensée analytique pour découvrir des modèles, résoudre des problèmes récurrents et fournir des informations exploitables qui ont permis une prise de décision éclairée.
 
 ## Formation
 
-**Université Concordia (2021 – 2025)**, Baccalauréat en génie logiciel (Co-op), Gina Cody School of Engineering  
-- Bourse d’entrée (2021)  
-- Engineering Excellence Scholarship (2022)
+**Université Concordia (2021 – 2025)**, baccalauréat en génie (génie logiciel, programme coopératif), École de génie Gina Cody
+- Bourse d'entrée au premier cycle (2021)
+- Bourse d'excellence en génie (2022)
 
-**Collège Champlain Saint-Lambert (2019 – 2021)**, DEC en Sciences de la Santé  
+**Collège Champlain Saint-Lambert (2019 – 2021)**, diplôme d'études collégiales (sciences de la santé), sciences
 - Tableau d’honneur (2020, 2021)
 
 ## Centres d’Intérêt
 
-- Pratique de la boxe et découverte des arts martiaux  
-- Pâtisserie inspirée de diverses cultures  
-- Exploration des cultures du monde à travers lectures et documentaires
+- Pratique de la boxe deux fois par semaine et exploration d’autres arts martiaux.
+- Pâtisserie inspirée de diverses cultures.
+- Exploration des cultures du monde à travers des livres et des documentaires.
