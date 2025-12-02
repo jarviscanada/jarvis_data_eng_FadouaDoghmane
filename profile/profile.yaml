@@ -23,6 +23,12 @@ skills:
     - HTML/CSS
     - React JS
     - Copilot AI Agents
+  familiar:
+    - Wireshark
+    - Burp Suite
+    - Android Studio
+    - Javascript
+    - Microsoft Sentinel
 
 jarvis_projects:
   - name: "Linux Cluster Resource Monitoring App"
