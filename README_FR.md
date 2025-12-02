@@ -14,7 +14,7 @@ Je suis diplômé en génie logiciel de l'Université Concordia et possède une 
 
 Code source du projet : [https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane)
 
-**Application de surveillance de clusters Linux** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/tree/master/linux_sql)]: développement d'un agent de surveillance Linux léger à l'aide de Bash, Docker, crontab et PostgreSQL pour collecter et stocker les spécifications matérielles et les mesures d'utilisation en temps réel sur plusieurs hôtes Rocky Linux. Mise en œuvre de scripts de collecte de données automatisés, conteneurisation du backend PostgreSQL, planification de la collecte récurrente de mesures avec crontab et création de requêtes analytiques pour surveiller les performances du système et l'utilisation des ressources.
+**Application de surveillance de clusters Linux** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/tree/master/linux_sql)]: Développement d'un agent de surveillance Linux léger à l'aide de Bash, Docker, crontab et PostgreSQL pour collecter et stocker les spécifications matérielles et les mesures d'utilisation en temps réel sur plusieurs hôtes Rocky Linux. Mise en œuvre de scripts de collecte de données automatisés, conteneurisation du backend PostgreSQL, planification de la collecte récurrente de mesures avec crontab et création de requêtes analytiques pour surveiller les performances du système et l'utilisation des ressources.
 
 ## Projets Sélectionnés
 
