@@ -1,8 +1,58 @@
-# Jarvis Data Engineering Training
-1. [Linux Cluster Monitoring Agent (Linux and SQL)](./linux_sql) In-progress
-2. [Core Java Apps](./core_java) In-progress
-3. [Python Data Analytics](./python_data_analytics) In-progress
-4. [Spring Boot Trading REST API](./springboot) In-progress
-5. [Javascript Front End](./javascript) In-progress
-6. [Cloud/DevOps](./cloud_devops) In-progress
+# Fadoua Doghmane . Jarvis Consulting
 
+I am a Software Engineering graduate from Concordia University with hands-on experience in data analytics, workflow automation, and data reporting. In my roles at CrucialLogics and BRP, I developed integrations using REST APIs, automated workflows with Azure Logic Apps to synchronize data across systems, designed Power BI dashboards, and delivered actionable data quality insights using SQL, DAX, and various databases. I am currently working at Jarvis, where I develop data pipelines, analyze and visualize data using Python, Bash, and SQL, and build scalable solutions leveraging Docker, PostgreSQL, and Linux-based environments. I am passionate about using data to improve processes and uncover insights. I am seeking data-focused engineering roles where I can apply my problem-solving skills, strong technical foundation, and ability to quickly learn and deliver effective solutions.
+
+
+## Skills
+
+**Proficient:** SQL, DBMS (MySQL, Snowflake, PostgreSQL), Data Modeling, Python, Pandas/Numpy, PySpark/Apache Spark, Power BI, REST APIs
+
+**Competent:** Java, Docker, Linux, PyTorch, Azure Logic Apps, HTML/CSS, React JS, Copilot AI Agents
+
+**Familiar:** Wireshark, Burp Suite, Android Studio, Javascript, Microsoft Sentinel
+
+## Jarvis Projects
+
+Project source code: [https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane)
+
+
+**Linux Cluster Resource Monitoring App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/tree/master/linux_sql)]: Developed a lightweight Linux monitoring agent using Bash, Docker, crontab, and PostgreSQL to collect and store hardware specifications and real-time usage metrics across multiple Rocky Linux hosts. Implemented automated data collection scripts, containerized the PostgreSQL backend, scheduled recurring metric gathering with crontab, and built analytics queries to monitor system performance and resource utilization.
+
+
+
+## Highlighted Projects
+**AI-Powered Waste Sorting**: Developed an AI-powered waste classification system using Python and PyTorch to automate sorting across ten waste categories and support sustainable recycling practices. Built a full machine-learning pipeline, including data preprocessing, augmentation, visualization, and training of CNN architectures such as MobileNet, ResNet50, and VGG16. Created modular notebooks and scripts for reproducible training, evaluation, and deployment on sample datasets, demonstrating scalable performance and actionable insights for real-world waste management.
+
+
+**Food Assistance Analytics (Hackathon)**: Developed analytical dashboards in Power BI to evaluate the distribution efficiency of Montreal’s food assistance programs. Collected, cleaned, and transformed data from multiple sources to produce reliable reporting outputs. Designed interactive visualizations to reveal usage patterns, highlight underserved areas, and monitor resource allocation. Interpreted findings to deliver actionable recommendations, improving program reach and operational effectiveness while demonstrating the impact of data-driven decision-making on social program optimization.
+
+
+**Emotion-Detector-CNN**: Collaborated in a team of three to develop a CNN for detecting emotions from facial expressions. Prepared and refined the dataset through cleaning, labeling, augmentation, and visualization, and implemented multiple CNN variants to classify emotions such as happy, focused, surprised, and neutral. Applied k-fold cross-validation for evaluation and mitigated age- and gender-related dataset bias through re-labeling and retraining. Produced comprehensive documentation covering data provenance, preprocessing, model design, evaluation, and bias-mitigation strategies.
+
+
+
+## Professional Experiences
+
+**Junior Data Engineer Trainee, Jarvis Program (Nov 2025 – Present)**: Currently working at Jarvis on data engineering projects, including SQL, Python, Linux, Bash, PostgreSQL, and Docker. Managed and manipulated data in enterprise environments, built and maintained database systems, implemented automated data pipelines, and applied data handling best practices to generate actionable insights. Delivered projects focused on building scalable pipelines, ensuring data quality, and supporting data-driven decision-making across enterprise environments.
+
+
+**Associate Consultant, CrucialLogics (May 2024 - Present)**: Developed interactive Power BI dashboards to deliver actionable business insights and support strategic decision-making. Built integrations between enterprise tools using REST APIs and Azure Logic Apps to streamline data flows and improve efficiency. Deployed Copilot agents to automate workflows and reduce manual effort. Collaborated with cross-functional teams to gather requirements, design scalable automation solutions, and ensure smooth implementation. Applied analytical thinking to identify process improvements and deliver solutions that drive measurable impact.
+
+
+**Data Quality Intern, Bombardier Recreational Products (BRP) (May 2023 - Aug 2023)**: Collaborated with multiple lines of business to improve data quality and ensure accurate reporting by generating Snowflake and Power BI reports, identifying inconsistencies, and documenting key processes. Developed standardized templates and workflow documentation to streamline operations and enhance data reliability. Applied analytical thinking to uncover patterns, resolve recurring issues, and deliver actionable insights that supported informed decision-making.
+
+
+
+## Education
+**Concordia University (2021 - 2025)**, Bachelor of Engineering (Software Engineering, Co-op), Gina Cody School of Engineering
+- Undergraduate Entrance Bursary (2021)
+- Engineering Excellence Scholarship (2022)
+
+**Champlain College Saint-Lambert (2019 - 2021)**, Diploma of College Studies (Health Sciences), Science
+- Honor Roll Student (2020, 2021)
+
+
+## Miscellaneous
+- Practice boxing twice a week and try out different martial arts.
+- Enjoy baking desserts from diverse backgrounds.
+- Love exploring world cultures and traditions through books and documentaries.
