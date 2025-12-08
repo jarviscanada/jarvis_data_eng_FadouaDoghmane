@@ -58,7 +58,7 @@ ORDER BY yyyymm;
 - **Customer Segments**: Champions, Loyal, At Risk, Hibernating, etc.
 
 ## Deliverables
-- Jupyter Notebook: [./retail_data_analytics_wrangling.ipynb](./retail_data_analytics_wrangling.ipynb)
+- Jupyter Notebook: [https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane/blob/feature/python_data_analytics/python_data_analytics/python_data_wrangling/retail_data_analytics_wrangling.ipynb](./retail_data_analytics_wrangling.ipynb)
 - SQL Queries: `psql/data_explore.sql`
 - Plots and visualizations: Monthly sales, growth, active users, customer segments
 - RFM Table: Customer ID, Recency, Frequency, Monetary, RFM Score, Segment
