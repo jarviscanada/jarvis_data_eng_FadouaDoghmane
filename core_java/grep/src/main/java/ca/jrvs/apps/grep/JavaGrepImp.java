@@ -1,7 +1,166 @@
 package ca.jrvs.apps.grep;
 
-public class JaraGrepImp implements JavaGrep{
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.apache.log4j.BasicConfigurator;
 
+import java.io.*;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
 
-    
+public class JavaGrepImp implements JavaGrep {
+
+    final Logger logger = LoggerFactory.getLogger(JavaGrepImp.class);
+
+    private String regex;
+    private String rootPath;
+    private String outFile;
+
+    /**
+     * Entry point
+     * args[0] regex
+     * args[1] rootPath
+     * args[2] outFile
+     */
+    public static void main(String[] args) {
+        if (args.length != 3) {
+            throw new IllegalArgumentException(
+                    "USAGE: JavaGrep regex rootPath outFile"
+            );
+        }
+
+        // Use default logger config
+        BasicConfigurator.configure();
+
+        JavaGrepImp javaGrepImp = new JavaGrepImp();
+        javaGrepImp.setRegex(args[0]);
+        javaGrepImp.setRootPath(args[1]);
+        javaGrepImp.setOutFile(args[2]);
+
+        try {
+            javaGrepImp.process();
+        } catch (Exception ex) {
+            javaGrepImp.logger.error("Error: Unable to process", ex);
+        }
+    }
+
+    /**
+     * Top-level workflow
+     */
+    @Override
+    public void process() throws IOException {
+        List<String> matchedLines = new ArrayList<>();
+
+        for (File file : listFiles(rootPath)) {
+            for (String line : readLines(file)) {
+                if (containsPattern(line)) {
+                    matchedLines.add(line);
+                }
+            }
+        }
+        writeToFile(matchedLines);
+    }
+
+    /**
+     * Recursively list files
+     */
+    @Override
+    public List<File> listFiles(String rootDir) {
+        List<File> files = new ArrayList<>();
+        File root = new File(rootDir);
+
+        if (!root.exists()) {
+            return files;
+        }
+
+        if (root.isFile()) {
+            files.add(root);
+        } else {
+            File[] list = root.listFiles();
+            if (list != null) {
+                for (File f : list) {
+                    if (f.isDirectory()) {
+                        files.addAll(listFiles(f.getAbsolutePath()));
+                    } else {
+                        files.add(f);
+                    }
+                }
+            }
+        }
+        return files;
+    }
+
+    /**
+     * Read file lines
+     */
+    @Override
+    public List<String> readLines(File inputFile) {
+        if (!inputFile.isFile()) {
+            throw new IllegalArgumentException(
+                    "Input is not a file: " + inputFile
+            );
+        }
+
+        try {
+            return Files.readAllLines(inputFile.toPath());
+        } catch (IOException e) {
+            throw new IllegalArgumentException(
+                    "Unable to read file: " + inputFile, e
+            );
+        }
+    }
+
+    /**
+     * Regex match
+     */
+    @Override
+    public boolean containsPattern(String line) {
+        return Pattern.compile(regex).matcher(line).find();
+    }
+
+    /**
+     * Write output file
+     */
+    @Override
+    public void writeToFile(List<String> lines) throws IOException {
+        try (BufferedWriter writer =
+                     new BufferedWriter(new FileWriter(outFile))) {
+            for (String line : lines) {
+                writer.write(line);
+                writer.newLine();
+            }
+        }
+    }
+
+    @Override
+    public String getRootPath() {
+        return rootPath;
+    }
+
+    @Override
+    public void setRootPath(String rootPath) {
+        this.rootPath = rootPath;
+    }
+
+    @Override
+    public String getRegex() {
+        return regex;
+    }
+
+    @Override
+    public void setRegex(String regex) {
+        this.regex = regex;
+    }
+
+    @Override
+    public String getOutFile() {
+        return outFile;
+    }
+
+    @Override
+    public void setOutFile(String outFile) {
+        this.outFile = outFile;
+    }
 }

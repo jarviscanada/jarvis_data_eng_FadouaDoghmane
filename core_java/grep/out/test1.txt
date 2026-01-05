@@ -1,0 +1,15 @@
+  public static void main(String[] args) {
+public interface JavaGrep {
+public class JavaGrepImp implements JavaGrep {
+    public static void main(String[] args) {
+    public void process() throws IOException {
+    public List<File> listFiles(String rootDir) {
+    public List<String> readLines(File inputFile) {
+    public boolean containsPattern(String line) {
+    public void writeToFile(List<String> lines) throws IOException {
+    public String getRootPath() {
+    public void setRootPath(String rootPath) {
+    public String getRegex() {
+    public void setRegex(String regex) {
+    public String getOutFile() {
+    public void setOutFile(String outFile) {
