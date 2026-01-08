@@ -59,6 +59,11 @@ projets_jarvis:
       pour surveiller les performances du système et l'utilisation des
       ressources.
 
+  - nom: "Projet d'Analyse de Données Python"
+    lien_git: "/python_data_analytics"
+    description: >
+Analyse des données transactionnelles du commerce de détail de LGS pour fournir des informations exploitables sur la croissance du chiffre d'affaires, la fidélisation des clients et l'optimisation marketing. Mise en place dun entrepôt de données PostgreSQL (OLAP) à partir de MS SQL Server via Docker. Nettoyage et préparation des données, calcul des indicateurs mensuels et analyse RFM avec Python (pandas, NumPy, matplotlib) pour segmenter les clients et évaluer leur valeur.
+
 projets_sélectionnés:
   - nom: "Système de tri des déchets par IA"
     description: >
