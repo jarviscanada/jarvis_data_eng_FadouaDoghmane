@@ -36,6 +36,22 @@ jarvis_projects:
     description: >
       Developed a lightweight Linux monitoring agent using Bash, Docker, crontab, and PostgreSQL to collect and store hardware specifications and real-time usage metrics across multiple Rocky Linux hosts. Implemented automated data collection scripts, containerized the PostgreSQL backend, scheduled recurring metric gathering with crontab, and built analytics queries to monitor system performance and resource utilization.
 
+  - name: "Python Data Analytics Project"
+    git_url: "/python_data_wrangling"
+    description: > 
+      Analyzed LGS retail transaction data to provide actionable insights for revenue growth, customer retention, and marketing optimization. Set up a PostgreSQL data warehouse (OLAP) from MS SQL Server transactional data via Docker. Performed data wrangling, monthly metrics calculations, and RFM analysis using Python (pandas, NumPy, matplotlib) to segment customers and evaluate value. Delivered Jupyter notebooks, SQL queries, plots, and RFM tables for actionable insights.
+
+jarvis_projects:
+  - name: "Linux Cluster Resource Monitoring App"
+    git_url: "/linux_sql"
+    description: >
+      Developed a lightweight Linux monitoring agent using Bash, Docker, crontab, and PostgreSQL to collect and store hardware specifications and real-time usage metrics across multiple Rocky Linux hosts. Implemented automated data collection scripts, containerized the PostgreSQL backend, scheduled recurring metric gathering with crontab, and built analytics queries to monitor system performance and resource utilization.
+
+  - name: "Python Data Analytics Project"
+    git_url: "/python_data_wrangling"
+    description: > 
+      Analyzed LGS retail transaction data to provide actionable insights for revenue growth, customer retention, and marketing optimization. Set up a PostgreSQL data warehouse (OLAP) from MS SQL Server transactional data via Docker. Performed data wrangling, monthly metrics calculations, and RFM analysis using Python (pandas, NumPy, matplotlib) to segment customers and evaluate value. Delivered Jupyter notebooks, SQL queries, plots, and RFM tables for actionable insights. 
+
 highlighted_projects:
   - name: "AI-Powered Waste Sorting"
     description: >
