@@ -43,7 +43,7 @@
     },
     {
       "description": "Analyzed LGS retail transaction data to provide actionable insights for revenue growth, customer retention, and marketing optimization. Set up a PostgreSQL data warehouse (OLAP) from MS SQL Server transactional data via Docker. Performed data wrangling, monthly metrics calculations, and RFM analysis using Python (pandas, NumPy, matplotlib) to segment customers and evaluate value. Delivered Jupyter notebooks, SQL queries, plots, and RFM tables for actionable insights. \n",
-      "git_url": "/python_data_wrangling",
+      "git_url": "/python_data_analytics",
       "name": "Python Data Analytics Project"
     }
   ],
