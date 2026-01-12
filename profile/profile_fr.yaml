@@ -62,7 +62,12 @@ projets_jarvis:
   - nom: "Projet d'Analyse de Données Python"
     lien_git: "/python_data_analytics"
     description: >
-Analyse des données transactionnelles du commerce de détail de LGS pour fournir des informations exploitables sur la croissance du chiffre d'affaires, la fidélisation des clients et l'optimisation marketing. Mise en place dun entrepôt de données PostgreSQL (OLAP) à partir de MS SQL Server via Docker. Nettoyage et préparation des données, calcul des indicateurs mensuels et analyse RFM avec Python (pandas, NumPy, matplotlib) pour segmenter les clients et évaluer leur valeur.
+      Analyse des données transactionnelles du commerce de détail de LGS pour fournir des informations exploitables sur la croissance du chiffre d'affaires, la fidélisation des clients et l'optimisation marketing. Mise en place dun entrepôt de données PostgreSQL (OLAP) à partir de MS SQL Server via Docker. Nettoyage et préparation des données, calcul des indicateurs mensuels et analyse RFM avec Python (pandas, NumPy, matplotlib) pour segmenter les clients et évaluer leur valeur.
+
+  - nom: "Java Grep Application"
+    lien_git: "/core_java/grep"
+    description: >
+      Application Java inspirée de grep pour rechercher récursivement des fichiers et extraire les lignes correspondant à des expressions régulières. Architecture orientée interface garantissant des implémentations cohérentes et une séparation claire des responsabilités. Deux versions livrées, une implémentation Core Java et une version optimisée avec Lambdas et Streams. Utilisation de SLF4J pour la journalisation, Maven pour le build et Docker pour un déploiement simple et portable. 
 
 projets_sélectionnés:
   - nom: "Système de tri des déchets par IA"

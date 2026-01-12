@@ -45,6 +45,11 @@
       "description": "Analyzed LGS retail transaction data to provide actionable insights for revenue growth, customer retention, and marketing optimization. Set up a PostgreSQL data warehouse (OLAP) from MS SQL Server transactional data via Docker. Performed data wrangling, monthly metrics calculations, and RFM analysis using Python (pandas, NumPy, matplotlib) to segment customers and evaluate value. Delivered Jupyter notebooks, SQL queries, plots, and RFM tables for actionable insights. \n",
       "git_url": "/python_data_analytics",
       "name": "Python Data Analytics Project"
+    },
+    {
+      "description": "Built a Java-based grep application that recursively searches files and extracts lines matching user-defined regular expressions. Designed a clean, interface-driven architecture (`JavaGrep`) to enforce consistent implementations and separation of concerns. Implemented two versions, a core Java implementation using IO, Collections, and Regex APIs, and an optimized Lambda/Streams version for functional-style processing. Integrated SLF4J for structured logging, Maven for build automation, and Docker for containerized deployment. Delivered a CLI-driven tool with documented workflow, performance considerations, and Docker image for easy distribution.\n",
+      "git_url": "/core_java/grep",
+      "name": "Java Grep Application"
     }
   ],
   "name": "Fadoua Doghmane",
