@@ -17,7 +17,7 @@ java -jar target/grep-<version>.jar <regex> <rootDir> <outFile>
 ```
 Example:
 ```bash
-java -jar target/grep.jar ".*Romeo.*Juliet.*" ./data ./log/grep.out
+java -jar target/grep-1.0-SNAPSHOT.jar ".*Romeo.*Juliet.*" ./data ./log/grep.out
 ```
 
 ### Run with Docker
