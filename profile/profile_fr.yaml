@@ -1,0 +1,150 @@
+nom: "Fadoua Doghmane"
+organisation: "Jarvis Consulting"
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane
+
+resume: >
+  Je suis diplômée en génie logiciel de l'Université Concordia et je possède une
+  expérience pratique dans l'analyse de données, l'automatisation des flux de
+  travail et la production de rapports de données. Dans le cadre de mes fonctions
+  chez CrucialLogics et BRP, j'ai développé des intégrations à l'aide d'API REST,
+  automatisé des flux de travail avec Azure Logic Apps pour synchroniser les
+  données entre les systèmes, conçu des tableaux de bord Power BI et fourni des
+  informations exploitables sur la qualité des données à l'aide de SQL, DAX et de
+  diverses bases de données. Je travaille actuellement chez Jarvis, où je
+  développe des pipelines de données, j'analyse et je visualise des données à
+  l'aide de Python, Bash et SQL, et je crée des solutions évolutives en tirant
+  parti de Docker, PostgreSQL et d'environnements basés sur Linux. Je suis
+  passionnée par l'utilisation des données pour améliorer les processus et
+  découvrir des informations. Je recherche des postes d'ingénierie axés sur les
+  données où je peux mettre en pratique mes compétences en résolution de
+  problèmes, mes solides bases techniques et ma capacité à apprendre rapidement
+  afin de fournir des solutions efficaces.
+
+compétences:
+  maitrisées:
+    - SQL
+    - SGBD (MySQL, Snowflake, PostgreSQL)
+    - Modélisation de données
+    - Python
+    - Pandas / Numpy
+    - PySpark / Apache Spark
+    - Power BI
+    - API REST
+  compétentes:
+    - Java
+    - Docker
+    - Linux
+    - PyTorch
+    - Azure Logic Apps
+    - HTML / CSS
+    - React JS
+    - Agents IA Copilot
+  connaissances:
+    - Wireshark
+    - Burp Suite
+    - Android Studio
+    - JavaScript
+    - Microsoft Sentinel
+
+projets_jarvis:
+  - nom: "Application de surveillance de clusters Linux"
+    lien_git: "/linux_sql"
+    description: >
+      Développement d'un agent de surveillance Linux léger à l'aide de Bash,
+      Docker, crontab et PostgreSQL afin de collecter et stocker les
+      spécifications matérielles et les métriques d'utilisation en temps réel sur
+      plusieurs hôtes Rocky Linux. Mise en uvre de scripts automatisés de
+      collecte de données, conteneurisation du backend PostgreSQL, planification
+      de la collecte récurrente via crontab et création de requêtes analytiques
+      pour surveiller les performances du système et l'utilisation des
+      ressources.
+
+  - nom: "Projet d'Analyse de Données Python"
+    lien_git: "/python_data_analytics"
+    description: >
+      Analyse des données transactionnelles du commerce de détail de LGS pour fournir des informations exploitables sur la croissance du chiffre d'affaires, la fidélisation des clients et l'optimisation marketing. Mise en place dun entrepôt de données PostgreSQL (OLAP) à partir de MS SQL Server via Docker. Nettoyage et préparation des données, calcul des indicateurs mensuels et analyse RFM avec Python (pandas, NumPy, matplotlib) pour segmenter les clients et évaluer leur valeur.
+
+  - nom: "Application Java Grep"
+    lien_git: "/core_java/grep"
+    description: >
+      Application Java inspirée de grep pour rechercher récursivement des fichiers et extraire les lignes correspondant à des expressions régulières. Architecture orientée interface garantissant des implémentations cohérentes et une séparation claire des responsabilités. Deux versions livrées, une implémentation Core Java et une version optimisée avec Lambdas et Streams. Utilisation de SLF4J pour la journalisation, Maven pour le build et Docker pour un déploiement simple et portable. 
+
+projets_sélectionnés:
+  - nom: "Système de tri des déchets par IA"
+    description: >
+      Développement d'un système de classification des déchets assisté par
+      l'intelligence artificielle à l'aide de Python et PyTorch afin
+      d'automatiser le tri de dix catégories de déchets et de soutenir des
+      pratiques de recyclage durables. Conception d'un pipeline complet
+      d'apprentissage automatique comprenant le prétraitement, l'augmentation
+      et la visualisation des données, ainsi que l'entraînement d'architectures
+      CNN telles que MobileNet, ResNet50 et VGG16. Création de carnets et de
+      scripts modulaires pour un apprentissage, une évaluation et un déploiement
+      reproductibles sur des ensembles de données échantillons.
+  - nom: "Analyse des programmes d'aide alimentaire (Hackathon)"
+    description: >
+      Développement de tableaux de bord analytiques dans Power BI afin d'évaluer
+      l'efficacité de la distribution des programmes d'aide alimentaire de
+      Montréal. Collecte, nettoyage et transformation de données provenant de
+      multiples sources afin de produire des rapports fiables. Conception de
+      visualisations interactives pour révéler les tendances d'utilisation,
+      mettre en évidence les zones sous-desservies et suivre l'allocation des
+      ressources. Interprétation des résultats afin de formuler des
+      recommandations exploitables.
+  - nom: "Détection d'émotions par CNN"
+    description: >
+      Collaboration au sein d'une équipe de trois personnes pour développer un
+      réseau ide neurones convolutifs (CNN) permettant de détecter les émotions à
+      partir des expressions faciales. Préparation et amélioration de l'ensemble
+      de données par nettoyage, étiquetage, augmentation et visualisation, et
+      implémentation de plusieurs variantes de CNN. Application d'une validation
+      croisée k-fold et atténuation des biais liés à l'âge et au genre.
+
+expériences_professionnelles:
+  - titre: "Ingénieure de données junior"
+    entreprise: "Programme Jarvis"
+    duree: "Nov 2025 - Présent"
+    description: >
+      Travaille actuellement chez Jarvis sur des projets d'ingénierie des données
+      impliquant SQL, Python, Linux, Bash, PostgreSQL et Docker. Gestion et
+      manipulation de données dans des environnements d'entreprise, conception
+      et maintenance de systèmes de bases de données et mise en uvre de
+      pipelines de données automatisés.
+  - titre: "Consultante associée"
+    entreprise: "CrucialLogics"
+    duree: "Mai 2024 - Présent"
+    description: >
+      Développement de tableaux de bord Power BI interactifs pour fournir des
+      informations commerciales exploitables et soutenir la prise de décision
+      stratégique. Création d'intégrations entre outils d'entreprise à l'aide
+      d'API REST et d'Azure Logic Apps afin de rationaliser les flux de données et
+      d'améliorer l'efficacité.
+  - titre: "Stagiaire en qualité des données"
+    entreprise: "BRP"
+    duree: "Mai 2023 - Août 2023"
+    description: >
+      Collaboration avec plusieurs secteurs d'activité afin d'améliorer la
+      qualité des données et l'exactitude des rapports via Snowflake et Power BI.
+      Identification des incohérences, documentation des processus clés et
+      fourniture d'informations exploitables pour soutenir la prise de décision.
+
+formation:
+  - etablissement: "Université Concordia"
+    duree: "2021 - 2025"
+    diplome: "Baccalauréat en génie (génie logiciel, programme coopératif)"
+    departement: "École de génie Gina Cody"
+    distinctions:
+      - "Bourse d'entrée au premier cycle (2021)"
+      - "Bourse d'excellence en génie (2022)"
+  - etablissement: "Collège Champlain Saint-Lambert"
+    duree: "2019 - 2021"
+    diplome: "Diplôme d'études collégiales (sciences de la santé)"
+    departement: "Sciences"
+    distinctions:
+      - "Tableau dhonneur (2020, 2021)"
+
+centres_d'interêt:
+  - "Pratique de la boxe deux fois par semaine et exploration dautres arts martiaux."
+  - "Pâtisserie inspirée de diverses cultures."
+  - "Exploration des cultures du monde à travers des livres et des documentaires."
+
