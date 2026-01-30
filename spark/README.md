@@ -23,8 +23,8 @@ The retail dataset (`retail.csv`) is processed using **PySpark DataFrames** in *
 - Persisting data to Hive Metastore for further querying  
 
 📓 **Databricks Notebooks:**
-- [`Retail Data Analytics with PySpark.ipynb`](spark/notebook/Retail%20Data%20Analytics%20with%20PySpark.ipynb)  
-- [`Retail Data Analytics with PySpark.dbc`](spark/notebook/Retail%20Data%20Analytics%20with%20PySpark.dbc)
+- [`Retail Data Analytics with PySpark.ipynb`](./notebook/Retail%20Data%20Analytics%20with%20PySpark.ipynb)  
+- [`Retail Data Analytics with PySpark.dbc`](./notebook/Retail%20Data%20Analytics%20with%20PySpark.dbc)
 
 ### Architecture (Explained in Words)
 The **Databricks architecture** consists of:
@@ -47,7 +47,7 @@ The WDI dataset is processed using **PySpark DataFrames** in **Zeppelin notebook
 - Visualizing results within Zeppelin notebooks
 
 📓 **Zeppelin Notebook:**  
-- [`Spark Dataframe - WDI Data Analytics.json`](spark/notebook/Spark%20Dataframe%20-%20WDI%20Data%20Analytics.json)
+- [`Spark Dataframe - WDI Data Analytics.json`](./notebook/Spark%20Dataframe%20-%20WDI%20Data%20Analytics.json)
 
 ### Architecture (Explained in Words)
 The **Zeppelin architecture** consists of:
