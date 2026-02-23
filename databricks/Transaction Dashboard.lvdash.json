@@ -1,0 +1,172 @@
+{
+  "datasets": [
+    {
+      "name": "2c7a8ddd",
+      "displayName": "amount_risk_analysis",
+      "queryLines": [
+        "SELECT * FROM jarvis_server_1.gold.amount_risk_analysis"
+      ]
+    },
+    {
+      "name": "2a39f2ae",
+      "displayName": "fraud_channel_analysis",
+      "queryLines": [
+        "SELECT * FROM jarvis_server_1.gold.fraud_channel_analysis"
+      ]
+    },
+    {
+      "name": "d817f5f2",
+      "displayName": "fraud_daily_metrics",
+      "queryLines": [
+        "SELECT * FROM jarvis_server_1.gold.fraud_daily_metrics"
+      ]
+    },
+    {
+      "name": "575b7123",
+      "displayName": "fraud_merchant_metrics",
+      "queryLines": [
+        "SELECT * FROM jarvis_server_1.gold.fraud_merchant_metrics"
+      ]
+    },
+    {
+      "name": "60d85089",
+      "displayName": "fraud_time_analysis",
+      "queryLines": [
+        "SELECT * FROM jarvis_server_1.gold.fraud_time_analysis"
+      ]
+    },
+    {
+      "name": "8f602366",
+      "displayName": "fraud_user_metrics",
+      "queryLines": [
+        "SELECT * FROM jarvis_server_1.gold.fraud_user_metrics"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "3884098c",
+      "displayName": "Transaction Dashboard",
+      "layout": [
+        {
+          "widget": {
+            "name": "fraud-rate-trend",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "d817f5f2",
+                  "fields": [
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "sum(fraud_rate)",
+                      "expression": "SUM(`fraud_rate`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Fraud Rate Trend"
+              },
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(date)",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(fraud_rate)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "total-fraud-loss",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "d817f5f2",
+                  "fields": [
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "sum(total_fraud_loss)",
+                      "expression": "SUM(`total_fraud_loss`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Total Fraud Loss"
+              },
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(date)",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(total_fraud_loss)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 0,
+            "width": 6,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "4cc52094",
+      "displayName": "Global Filters",
+      "pageType": "PAGE_TYPE_GLOBAL_FILTERS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
