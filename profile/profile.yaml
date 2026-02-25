@@ -2,24 +2,26 @@ name: "Fadoua Doghmane"
 github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_FadouaDoghmane
 
 summary: >
-  I am a Software Engineering graduate from Concordia University with hands-on experience in data analytics, workflow automation, and data reporting. In my roles at CrucialLogics and BRP, I developed integrations using REST APIs, automated workflows with Azure Logic Apps to synchronize data across systems, designed Power BI dashboards, and delivered actionable data quality insights using SQL, DAX, and various databases. I am currently working at Jarvis, where I develop data pipelines, analyze and visualize data using Python, Bash, and SQL, and build scalable solutions leveraging Docker, PostgreSQL, and Linux-based environments. I am passionate about using data to improve processes and uncover insights. I am seeking data-focused engineering roles where I can apply my problem-solving skills, strong technical foundation, and ability to quickly learn and deliver effective solutions.
-
+  I am a Software Engineering graduate from Concordia University with hands-on experience in data engineering, analytics, workflow automation, and reporting. In my roles at CrucialLogics and BRP, I developed integrations using REST APIs, automated workflows with Azure Logic Apps to synchronize enterprise systems, designed Power BI dashboards, and delivered actionable insights using SQL, DAX, and multiple databases. I am currently working at Jarvis, where I develop end-to-end data pipelines on Azure and Databricks, implement automated ETL workflows, and transform data into analytics-ready tables to support enterprise reporting and decision-making. I am passionate about using data to improve processes and uncover insights. I am seeking data analytics or data engineering roles where I can apply my problem-solving skills, strong technical foundation, and ability to quickly learn and deliver scalable cloud-based data solutions.
 skills:
   proficient:
+    - Power BI
+    - REST APIs
     - SQL
     - DBMS (MySQL, Snowflake, PostgreSQL)
+    - Azure Databricks
+    - Azure Data Factory
+    - Azure SQL Database
+    - Azure Logic Apps
     - Data Modeling
     - Python
     - Pandas/Numpy
     - PySpark/Apache Spark
-    - Power BI
-    - REST APIs
   competent:
     - Java
     - Docker
     - Linux
     - PyTorch
-    - Azure Logic Apps
     - HTML/CSS
     - React JS
     - Copilot AI Agents
@@ -31,39 +33,36 @@ skills:
     - Microsoft Sentinel
 
 jarvis_projects:
-  - name: "Linux Cluster Resource Monitoring App"
-    git_url: "/linux_sql"
+  - name: "Financial Fraud Analytics Pipeline"
+    git_url: "/databricks"
     description: >
-      Developed a lightweight Linux monitoring agent using Bash, Docker, crontab, and PostgreSQL to collect and store hardware specifications and real-time usage metrics across multiple Rocky Linux hosts. Implemented automated data collection scripts, containerized the PostgreSQL backend, scheduled recurring metric gathering with crontab, and built analytics queries to monitor system performance and resource utilization.
-
+      Designed and implemented an end-to-end data engineering solution using Azure Databricks, Azure Data Factory, and Azure SQL Database to ingest and process structured and semi-structured data. Built a medallion architecture (bronze, silver, gold) ELT pipeline to transform raw CSV and JSON data into curated analytics-ready tables. Implemented JDBC and ADF-based ingestion workflows, orchestrated automated jobs within Databricks, and developed aggregated gold-layer datasets to power business intelligence dashboards and fraud analytics use cases.
   - name: "Python Data Analytics Project"
     git_url: "/python_data_analytics"
     description: > 
       Analyzed LGS retail transaction data to provide actionable insights for revenue growth, customer retention, and marketing optimization. Set up a PostgreSQL data warehouse (OLAP) from MS SQL Server transactional data via Docker. Performed data wrangling, monthly metrics calculations, and RFM analysis using Python (pandas, NumPy, matplotlib) to segment customers and evaluate value. Delivered Jupyter notebooks, SQL queries, plots, and RFM tables for actionable insights. 
-
   - name: "Java Grep Application"
     git_url: "/core_java/grep" 
     description: >
       Built a Java-based grep application that recursively searches files and extracts lines matching user-defined regular expressions. Designed a clean, interface-driven architecture (`JavaGrep`) to enforce consistent implementations and separation of concerns. Implemented two versions, a core Java implementation using IO, Collections, and Regex APIs, and an optimized Lambda/Streams version for functional-style processing. Integrated SLF4J for structured logging, Maven for build automation, and Docker for containerized deployment. Delivered a CLI-driven tool with documented workflow, performance considerations, and Docker image for easy distribution.
 
 highlighted_projects:
-  - name: "AI-Powered Waste Sorting"
-    description: >
-      Developed an AI-powered waste classification system using Python and PyTorch to automate sorting across ten waste categories and support sustainable recycling practices. Built a full machine-learning pipeline, including data preprocessing, augmentation, visualization, and training of CNN architectures such as MobileNet, ResNet50, and VGG16. Created modular notebooks and scripts for reproducible training, evaluation, and deployment on sample datasets, demonstrating scalable performance and actionable insights for real-world waste management.
   - name: "Food Assistance Analytics (Hackathon)"
     description: >
       Developed analytical dashboards in Power BI to evaluate the distribution efficiency of Montreal’s food assistance programs. Collected, cleaned, and transformed data from multiple sources to produce reliable reporting outputs. Designed interactive visualizations to reveal usage patterns, highlight underserved areas, and monitor resource allocation. Interpreted findings to deliver actionable recommendations, improving program reach and operational effectiveness while demonstrating the impact of data-driven decision-making on social program optimization.
+  - name: "AI-Powered Waste Sorting"
+    description: >
+      Developed an AI-powered waste classification system using Python and PyTorch to automate sorting across ten waste categories and support sustainable recycling practices. Built a full machine-learning pipeline, including data preprocessing, augmentation, visualization, and training of CNN architectures such as MobileNet, ResNet50, and VGG16. Created modular notebooks and scripts for reproducible training, evaluation, and deployment on sample datasets, demonstrating scalable performance and actionable insights for real-world waste management.
   - name: "Emotion-Detector-CNN"
     description: >
       Collaborated in a team of three to develop a CNN for detecting emotions from facial expressions. Prepared and refined the dataset through cleaning, labeling, augmentation, and visualization, and implemented multiple CNN variants to classify emotions such as happy, focused, surprised, and neutral. Applied k-fold cross-validation for evaluation and mitigated age- and gender-related dataset bias through re-labeling and retraining. Produced comprehensive documentation covering data provenance, preprocessing, model design, evaluation, and bias-mitigation strategies.
       
 professional_experience:
-  - title: "Junior Data Engineer Trainee"
+  - title: "Junior Data Engineer"
     company: "Jarvis Program"
     duration: "Nov 2025 – Present"
     description: >
-      Currently working at Jarvis on data engineering projects, including SQL, Python, Linux, Bash, PostgreSQL, and Docker. Managed and manipulated data in enterprise environments, built and maintained database systems, implemented automated data pipelines, and applied data handling best practices to generate actionable insights. Delivered projects focused on building scalable pipelines, ensuring data quality, and supporting data-driven decision-making across enterprise environments.
-  - title: "Associate Consultant"
+      Currently working at Jarvis on data engineering and analytics projects, using SQL, Python, Power BI, Azure, and Databricks alongside Linux, Bash, PostgreSQL, and Docker. Managed and transformed data in enterprise environments, built medallion architecture pipelines, and implemented automated ETL workflows using Azure Data Factory and Databricks. Delivered projects focused on building scalable cloud data solutions, ensuring data quality, and supporting data-driven decision-making across complex enterprise environments. - title: "Associate Consultant in Data Analytics"
     company: "CrucialLogics"
     duration: "May 2024 - Present"
     description: >
@@ -88,6 +87,9 @@ education:
     department: "Science"
     awards_achievements:
       - "Honor Roll Student (2020, 2021)"
+  - school_name: "Microsoft Certification"
+    duration: "2025"
+    degree: "Power BI Data Analyst Associate"
   
 others:
   - title: "Activities/Hobbies"
