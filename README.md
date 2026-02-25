@@ -28,13 +28,13 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_FadouaDogh
 
 ## Highlighted Projects
 
+**Customer Success Analytics Dashboard**: Developed interactive dashboards in Power BI to provide actionable insights on the company’s client portfolio. Collected, cleaned, and integrated data from multiple CRM systems, including Autotask, HubSpot, and Forecast, to ensure accurate reporting. Designed visualizations to identify top-revenue clients, assess time and resource allocation per account, and monitor overall client engagement. Delivered insights that informed strategic decision-making, optimized customer success efforts, and highlighted opportunities to maximize revenue and efficiency.
+
+
 **Food Assistance Analytics (Hackathon)**: Developed analytical dashboards in Power BI to evaluate the distribution efficiency of Montreal’s food assistance programs. Collected, cleaned, and transformed data from multiple sources to produce reliable reporting outputs. Designed interactive visualizations to reveal usage patterns, highlight underserved areas, and monitor resource allocation. Interpreted findings to deliver actionable recommendations supporting improved program reach and operational effectiveness.
 
 
 **AI-Powered Waste Sorting**: Developed an AI-powered waste classification system using Python and PyTorch to automate sorting across ten waste categories and support sustainable recycling practices. Built a full machine-learning pipeline including data preprocessing, augmentation, visualization, and training of CNN architectures such as MobileNet, ResNet50, and VGG16. Created modular notebooks and scripts for reproducible training and evaluation.
-
-
-**Emotion-Detector-CNN**: Collaborated in a team of three to develop a convolutional neural network for detecting emotions from facial expressions. Prepared and refined the dataset through cleaning, labeling, augmentation, and visualization. Implemented multiple CNN variants and applied k-fold cross-validation for evaluation. Reduced dataset bias through re-labeling and retraining and produced comprehensive project documentation.
 
 
 
