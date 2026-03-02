@@ -1,0 +1,307 @@
+{
+  "datasets": [
+    {
+      "name": "a1d98d20",
+      "displayName": "Gold_Stock_Data",
+      "queryLines": [
+        "SELECT *\r\n",
+        "FROM default.gold_stock_data\r\n",
+        "ORDER BY date;"
+      ]
+    },
+    {
+      "name": "309afe72",
+      "displayName": "Stock Price Trend with Moving Averages",
+      "queryLines": [
+        "SELECT date, close, ma_7_close, ma_30_close\r\n",
+        "FROM default.gold_stock_data\r\n",
+        "ORDER BY date;"
+      ]
+    },
+    {
+      "name": "da605cdd",
+      "displayName": "Daily Return Volatility",
+      "queryLines": [
+        "SELECT date, daily_return_pct\r\n",
+        "FROM default.gold_stock_data\r\n",
+        "ORDER BY date;"
+      ]
+    },
+    {
+      "name": "17c3084a",
+      "displayName": "Trading Volume Trend",
+      "queryLines": [
+        "SELECT date, volume\r\n",
+        "FROM default.gold_stock_data\r\n",
+        "ORDER BY date;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "99714605",
+      "displayName": "Stock Analysis Dashboard",
+      "layout": [
+        {
+          "widget": {
+            "name": "stock-price-trend-moving-averages",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "309afe72",
+                  "fields": [
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "sum(close)",
+                      "expression": "SUM(`close`)"
+                    },
+                    {
+                      "name": "sum(ma_7_close)",
+                      "expression": "SUM(`ma_7_close`)"
+                    },
+                    {
+                      "name": "sum(ma_30_close)",
+                      "expression": "SUM(`ma_30_close`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Stock Price Trend with Moving Averages"
+              },
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(date)",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "fields": [
+                    {
+                      "fieldName": "sum(close)"
+                    },
+                    {
+                      "fieldName": "sum(ma_7_close)"
+                    },
+                    {
+                      "fieldName": "sum(ma_30_close)"
+                    }
+                  ]
+                },
+                "label": {
+                  "show": false
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "daily-return-volatility",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "da605cdd",
+                  "fields": [
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "sum(daily_return_pct)",
+                      "expression": "SUM(`daily_return_pct`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Daily Return Volatility"
+              },
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(date)",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(daily_return_pct)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 0,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "trading-volume-trend",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "17c3084a",
+                  "fields": [
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "sum(volume)",
+                      "expression": "SUM(`volume`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Trading Volume Trend"
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(date)",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(volume)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 12,
+            "height": 7
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "a8ccb971",
+      "displayName": "Global Filters",
+      "layout": [
+        {
+          "widget": {
+            "name": "7a171afe",
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {},
+              "frame": {
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 2
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_GLOBAL_FILTERS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
