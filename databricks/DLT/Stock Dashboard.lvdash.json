@@ -1,0 +1,602 @@
+{
+  "datasets": [
+    {
+      "name": "62fd4ddd",
+      "displayName": "gold_stock_summary",
+      "queryLines": [
+        "SELECT * FROM gold_stock_summary"
+      ],
+      "catalog": "hive_metastore",
+      "schema": "dlt_demo"
+    },
+    {
+      "name": "f68abe68",
+      "displayName": "KPI Cards (Dynamic per symbol)",
+      "queryLines": [
+        "-- Latest values for all symbols (dashboard can filter by symbol)\r\n",
+        "SELECT\r\n",
+        "    symbol,\r\n",
+        "    FIRST_VALUE(close) OVER (PARTITION BY symbol ORDER BY date DESC) AS current_price,\r\n",
+        "    FIRST_VALUE(ma_7_close) OVER (PARTITION BY symbol ORDER BY date DESC) AS ma_7_day,\r\n",
+        "    FIRST_VALUE(ma_30_close) OVER (PARTITION BY symbol ORDER BY date DESC) AS ma_30_day,\r\n",
+        "    FIRST_VALUE(daily_return_pct) OVER (PARTITION BY symbol ORDER BY date DESC) AS daily_return_pct,\r\n",
+        "    FIRST_VALUE(total_monthly_volume) OVER (PARTITION BY symbol ORDER BY date DESC) AS total_monthly_volume\r\n",
+        "FROM gold_stock_summary"
+      ],
+      "catalog": "hive_metastore",
+      "schema": "dlt_demo"
+    },
+    {
+      "name": "7cd0ce86",
+      "displayName": "Daily Closing Price Trend (All symbols)",
+      "queryLines": [
+        "SELECT\r\n",
+        "    symbol,\r\n",
+        "    date,\r\n",
+        "    close,\r\n",
+        "    ma_7_close,\r\n",
+        "    ma_30_close\r\n",
+        "FROM gold_stock_summary\r\n",
+        "ORDER BY symbol, date ASC;"
+      ],
+      "catalog": "hive_metastore",
+      "schema": "dlt_demo"
+    },
+    {
+      "name": "97611284",
+      "displayName": "Daily Return % Trend (All symbols)",
+      "queryLines": [
+        "SELECT\r\n",
+        "    symbol,\r\n",
+        "    date,\r\n",
+        "    daily_return_pct\r\n",
+        "FROM gold_stock_summary\r\n",
+        "ORDER BY symbol, date ASC;"
+      ],
+      "catalog": "hive_metastore",
+      "schema": "dlt_demo"
+    },
+    {
+      "name": "6e720ae2",
+      "displayName": "Daily Volume (All symbols)",
+      "queryLines": [
+        "SELECT\r\n",
+        "    symbol,\r\n",
+        "    date,\r\n",
+        "    volume\r\n",
+        "FROM gold_stock_summary\r\n",
+        "ORDER BY symbol, date ASC;"
+      ],
+      "catalog": "hive_metastore",
+      "schema": "dlt_demo"
+    },
+    {
+      "name": "a4cafd71",
+      "displayName": "Monthly Summary Table (All symbols)",
+      "queryLines": [
+        "SELECT\r\n",
+        "    symbol,\r\n",
+        "    year,\r\n",
+        "    month,\r\n",
+        "    avg_monthly_close,\r\n",
+        "    max_monthly_high,\r\n",
+        "    min_monthly_low,\r\n",
+        "    avg_monthly_return_pct,\r\n",
+        "    total_monthly_volume\r\n",
+        "FROM gold_stock_summary\r\n",
+        "ORDER BY symbol, year, month;"
+      ],
+      "catalog": "hive_metastore",
+      "schema": "dlt_demo"
+    }
+  ],
+  "pages": [
+    {
+      "name": "ecd2d91a",
+      "displayName": "Stock Dashboard",
+      "layout": [
+        {
+          "widget": {
+            "name": "current-price",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62fd4ddd",
+                  "fields": [
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "avg(close)",
+                      "expression": "AVG(`close`)"
+                    }
+                  ],
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "DESC",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Current Price Average"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "avg(close)"
+                },
+                "period": {
+                  "fieldName": "monthly(date)"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "93f28064",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62fd4ddd",
+                  "fields": [
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "avg(ma_7_close)",
+                      "expression": "AVG(`ma_7_close`)"
+                    }
+                  ],
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "DESC",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "7-Day Moving Average"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "avg(ma_7_close)"
+                },
+                "period": {
+                  "fieldName": "monthly(date)"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 1,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "72088872",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62fd4ddd",
+                  "fields": [
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "avg(ma_30_close)",
+                      "expression": "AVG(`ma_30_close`)"
+                    }
+                  ],
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "DESC",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "30-Day Moving Average"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "avg(ma_30_close)"
+                },
+                "period": {
+                  "fieldName": "monthly(date)"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 1,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "6c5ab195",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62fd4ddd",
+                  "fields": [
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "avg(total_monthly_volume)",
+                      "expression": "AVG(`total_monthly_volume`)"
+                    }
+                  ],
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "DESC",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Monthly Volume Average"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "avg(total_monthly_volume)"
+                },
+                "period": {
+                  "fieldName": "monthly(date)"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 9,
+            "y": 1,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "stock-symbol",
+            "queries": [
+              {
+                "name": "dashboards/01f11b20aafb1e289fdfc000530db436/datasets/01f11b20f97c14128deea6d6472f105e_symbol",
+                "query": {
+                  "datasetName": "62fd4ddd",
+                  "fields": [
+                    {
+                      "name": "symbol",
+                      "expression": "`symbol`"
+                    },
+                    {
+                      "name": "symbol_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Stock Symbol"
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "symbol",
+                    "queryName": "dashboards/01f11b20aafb1e289fdfc000530db436/datasets/01f11b20f97c14128deea6d6472f105e_symbol"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "daily-closing-price-trend",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62fd4ddd",
+                  "fields": [
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "avg(close)",
+                      "expression": "AVG(`close`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Daily Closing Price Trend"
+              },
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(date)",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(close)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 4,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "2100d149",
+            "queries": [
+              {
+                "name": "dashboards/01f11b20aafb1e289fdfc000530db436/datasets/01f11b20f97c14128deea6d6472f105e_date",
+                "query": {
+                  "datasetName": "62fd4ddd",
+                  "fields": [
+                    {
+                      "name": "date",
+                      "expression": "`date`"
+                    },
+                    {
+                      "name": "date_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Stock Symbol"
+              },
+              "widgetType": "filter-date-range-picker",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "date",
+                    "queryName": "dashboards/01f11b20aafb1e289fdfc000530db436/datasets/01f11b20f97c14128deea6d6472f105e_date"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 0,
+            "width": 6,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "61b364bf",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62fd4ddd",
+                  "fields": [
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "avg(daily_return_pct)",
+                      "expression": "AVG(`daily_return_pct`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Daily Return % Trend"
+              },
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(date)",
+                  "displayName": "Date",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(daily_return_pct)",
+                  "format": {
+                    "type": "number-percent",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  },
+                  "displayName": "Average daily return %",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 4,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "weekly-trading-volume",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62fd4ddd",
+                  "fields": [
+                    {
+                      "name": "symbol",
+                      "expression": "`symbol`"
+                    },
+                    {
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    },
+                    {
+                      "name": "avg(total_monthly_volume)",
+                      "expression": "AVG(`total_monthly_volume`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Monthly Trading Volume"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(date)",
+                  "displayName": "Date",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(total_monthly_volume)",
+                  "displayName": "Total monthly volume",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "symbol",
+                  "displayName": "Symbol",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 10,
+            "width": 12,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "b4bdcbf2",
+      "displayName": "Global Filters",
+      "pageType": "PAGE_TYPE_GLOBAL_FILTERS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
